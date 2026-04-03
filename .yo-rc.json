@@ -1,0 +1,19 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "authenticationType": "jwt",
+    "baseName": "protaskflowv",
+    "buildTool": "maven",
+    "clientFramework": "angular",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "entities": [],
+    "jhipsterVersion": "8.11.0",
+    "jwtSecretKey": "Yjc5YTNlODU3ZDYwYjRiNWMxYzFkODhmYWExNWZjNDRjYjdiZTQ2MzJlYWZjYWIyOGQ3MzQ1NzQyYzllZTIzNjNkMWQwMzdjNjc2YzgxYjk3YTg2OTZjN2ZiYzEyMDJiMDAwOTQ0NjI0YmM1Y2UwM2VjZjc3NmRhOWU3Y2ZlZmI=",
+    "languages": ["en"],
+    "nativeLanguage": "en",
+    "packageName": "com.carnival.protaskflowv",
+    "prodDatabaseType": "postgresql",
+    "serverPort": "9000"
+  }
+}
