@@ -1,0 +1,59 @@
+application {
+  config {
+    baseName protaskflowv
+    applicationType monolith
+    packageName com.protaskflowv
+    authenticationType jwt
+    databaseType sql
+    devDatabaseType h2Disk
+    prodDatabaseType postgresql
+    buildTool maven
+    enableTranslation Boolean
+    languages [en, fr]
+    nativeLanguage fr
+    clientFramework angular
+    serverPort 9000
+  }
+  entities *
+}
+
+enum Priority {
+    LOW
+    MEDIUM
+    HIGH
+    URGENT
+}
+
+enum Status {
+    TODO
+    IN_PROGRESS
+    DONE
+    BLOCKED
+}
+
+entity Category {
+    name String required unique
+    color String
+    icon String
+}
+
+entity Task {
+    title String required
+    description String
+    priority Priority
+    status Status
+    dueDate LocalDate
+    createdAt Instant
+}
+
+entity Comment {
+    author String
+    content TextBlob
+    createdAt Instant
+}
+
+relationship ManyToOne {
+    Task{assignee(login)} to User with builtInEntity
+    Task{category} to Category
+    Comment{task} to Task
+}
